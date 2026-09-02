@@ -1,0 +1,38 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "levers"
+version = "0.1.0"
+description = "One owner for every kill, restart and reboot in your system — with a structural test that keeps it that way."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+keywords = ["operations", "supervisor", "restart", "kill", "watchdog", "reliability", "sre"]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Intended Audience :: Developers",
+  "Intended Audience :: System Administrators",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: POSIX",
+  "Programming Language :: Python :: 3",
+  "Topic :: System :: Systems Administration",
+  "Topic :: Software Development :: Testing",
+]
+dependencies = []
+
+[project.optional-dependencies]
+test = ["pytest>=7"]
+
+[project.scripts]
+levers-audit = "levers.audit:main"
+
+[project.urls]
+Source = "https://github.com/OWNER/levers"
+
+[tool.setuptools.packages.find]
+include = ["levers*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
