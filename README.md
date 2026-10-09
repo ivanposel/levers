@@ -1,5 +1,8 @@
 # levers
 
+[![tests](https://github.com/ivanposel/levers/actions/workflows/ci.yml/badge.svg)](https://github.com/ivanposel/levers/actions/workflows/ci.yml)
+
+
 **One module owns every kill, restart and reboot in your system — and a structural test fails
 the build when anything else reaches for one.**
 
